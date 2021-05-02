@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content%}
+<div class="jumbotron bg-secondary text-white">
+    <p>Please select the period of outstanding claims</p>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+         <table>
+            <tbody>
+            <tr>
+                <td>{{ form.sdate3.label }} </td>
+                <td>{{ form.sdate3 }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.edate.label }} </td>
+                <td>{{ form.edate }}</td>
+
+
+            </tbody>
+        </table>
+    <br>
+        {{ form.submit() }}
+    </form>
+</div>
+{% endblock %}

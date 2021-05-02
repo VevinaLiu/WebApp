@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h2>Welcome &#x1F60A;</h2>
+</div>
+<div>
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <td><a href="{{url_for('ReportX.reportx')}}">Report X</a></td>
+            <td><a href="{{url_for('ReportY.reporty')}}">Report Y (Download Batches)</a></td>
+            <td>Placeholder</td>
+
+        </tr>
+            <td><a href="{{url_for('outstanding.claim')}}">Outstanding Claims</a></td>
+            <td><a href="{{url_for('reb_process.reb_process')}}">Process Rebates</a></td>
+            <td>To be continued...</td>
+        <tr>
+            <td>To be continued...</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

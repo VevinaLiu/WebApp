@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+{% for message in get_flashed_messages() %}
+<div class="alert alert-warning alert-dismissible fade show">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">&times;</button>
+    {{ message }} &#10071;
+</div>
+
+{% endfor %}
+
+<div class="jumbotron">
+    <h5 style="color: #3a3a3a;">Process Rebates</h5>
+    <br>
+    <form class="table" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <table>
+            <tbody>
+                <tr>
+                    <td>Download the template?<br>(instructions included)</td>
+                    <td>{{ form.submit1 }}</td>
+                </tr>
+                <tr>
+                    <td>Please upload the file <br>(.xlsx) </td>
+                    <td><input type="file" name="file"></td>
+                </tr>
+                <tr>
+                    <td style="color: #ef4b4c"><strong>Process R</strong> &#128073;</td>
+                    <td>{{ form.submit2 }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+<div style="margin-right: 1%; margin-left: 1%; color:#cd3a56; ">
+    <p><strong>Report X:</strong></p>
+</div>
+
+<div style="margin-right: 1%; margin-left: 2%;">
+    <table class="table-bordered">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>List item 1</th>
+            <th>List item 2</th>
+            <th>List item 3</th>
+            <th>List item 4</th>
+            <th>List item 5</th>
+            <th>List item 6</th>
+            <th>List item 7</th>
+
+        </tr>
+        {% for x in xlist %}
+            <tr>
+                <td>{{ x[1] }}</td>
+                <td>{{ x[2] }}</td>
+                <td>{{ x[3] }}</td>
+                <td>{{ x[5] }}</td>
+                <td>{{ x[6] }}</td>
+                {% if x[8] == True %}
+                    <td>1</td>
+                {% else %}
+                    <td>0</td>
+                {% endif %}
+
+                <td>{{ x[9] }}</td>
+                <td>{{ x[11] }}</td>
+                <td>{{ x[12] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}
+
